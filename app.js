@@ -1,9 +1,15 @@
-const http = require('http');
+const express = require('express');
 
-//custom import
+const app = express();
 
-console.log(routes.text);
+app.use('/add-product', (req, res, next) => {
+	console.log('product page');
+	res.send('<h1>the "add-product" page</h1>');
+});
 
-const server = http.createServer(routes.handler);
+app.use('/', (req, res, next) => {
+	console.log('In another middleware');
+	res.send('<h1>Hello from express again!</h1>');
+});
 
-server.listen(3000);
+app.listen(3000);
