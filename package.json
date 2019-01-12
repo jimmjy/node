@@ -1,0 +1,24 @@
+{
+	"name": "node-js",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon app.js",
+		"start-server": "node app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jimmjy/node.git"
+	},
+	"author": "James Finkelstein",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jimmjy/node/issues"
+	},
+	"homepage": "https://github.com/jimmjy/node#readme",
+	"devDependencies": {
+		"nodemon": "^1.18.9"
+	}
+}
