@@ -4,13 +4,14 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-const adminRoutes = require('./routes/admin');
+const adminRoutes = require('./routes/admin'); //import admin.js
 
-const shopRoutes = require('./routes/shop');
+const shopRoutes = require('./routes/shop'); //import shop.js
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//using imported files
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
