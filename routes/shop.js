@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
 	//pug template setup
 	const products = adminData.products;
 	console.log(products);
-	res.render('shop', { prods: products, docTitle: 'Shop', path: '/' });
+	res.render('shop', { prods: products, docTitle: 'Shop', path: '/', hasProducts: products.length > 0 });
 });
 
 module.exports = router;
